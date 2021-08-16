@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: jmahboob-nginx
+  name: jmahboob-nginx
+  namespace: jmahboob
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jmahboob-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jmahboob-nginx
+    spec:
+      containers:
+      - image: nginx:latest
+        name: nginx
+        resources: {}
+status: {}
